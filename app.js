@@ -30,6 +30,9 @@ class Todo {
         dateDiv.innerHTML = date
         box.appendChild(todoDiv)
         box.appendChild(dateDiv)
+        let btn = document.createElement("button")
+        btn.innerHTML = "Done"
+        box.appendChild(btn)
         this.box.appendChild(box)
     }
 
