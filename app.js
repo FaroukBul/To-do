@@ -28,16 +28,25 @@ class Todo {
         let dateDiv = this.createDiv()
         todoDiv.innerHTML = todo
         dateDiv.innerHTML = date
+        todoDiv.classList.add("text-box")
+        todoDiv.classList.remove("todo")
+        dateDiv.classList.remove("todo")
+        dateDiv.classList.add("date-box")
         box.appendChild(todoDiv)
         box.appendChild(dateDiv)
-        let btn = document.createElement("button")
-        btn.innerHTML = "Done"
+        let btn = doneBtn()
         box.appendChild(btn)
         this.box.appendChild(box)
     }
 
+    doneBtn(){
+        let btn = document.createElement("button")
+        btn.classList.add("done-btn")
+    }
+
     createDiv(){
-        
-        return document.createElement("div")
+        let div = document.createElement("div")
+        div.classList.add("todo")
+        return div
     }
 }
