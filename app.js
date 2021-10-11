@@ -34,7 +34,7 @@ class Todo {
         dateDiv.classList.add("date-box")
         box.appendChild(todoDiv)
         box.appendChild(dateDiv)
-        let btn = doneBtn()
+        let btn = this.doneBtn()
         box.appendChild(btn)
         this.box.appendChild(box)
     }
@@ -42,6 +42,7 @@ class Todo {
     doneBtn(){
         let btn = document.createElement("button")
         btn.classList.add("done-btn")
+        return btn
     }
 
     createDiv(){
