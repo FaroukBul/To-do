@@ -52,18 +52,22 @@ h1{
     border-radius: 5px;
     width: 50%;
     overflow: hidden;
-    background-color: rgba(255, 166, 0, 0.308);
 }
+.todo-color {
+    background-color: rgba(255, 166, 0, 0.308)
+}
+.done-color {
+    background-color: rgba(80, 165, 101, 0.794);}
 
 .todo div {
     border: none;
 }
 
 .text-box {
+    margin-top: 0.2em;
     overflow: hidden;
     height: 0.7em;
     width: 70%;
-    margin: 0;
     align-content: center;
 }
 .text-box:hover {
@@ -78,9 +82,13 @@ h1{
     height: 40px;
     border: none;
     border-radius: 100px;
-    background-color: rgba(80, 165, 101, 0.794);
     cursor: pointer;
-
+}
+.btn-todo-color {
+    background-color: rgba(80, 165, 101, 0.794);
+}
+.btn-done-color {
+    background-color: rgba(204, 50, 44, 0.609);
 }
 .date-box {
     align-items: center;
