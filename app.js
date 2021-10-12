@@ -26,14 +26,9 @@ class Todo {
         let box = this.createDiv()
         let todoDiv = this.createDiv()
         let dateDiv = this.createDiv()
+        todoDiv, dateDiv = this.setClasses(todoDiv, dateDiv)
         todoDiv.innerHTML = todo
         dateDiv.innerHTML = date
-        todoDiv.classList.add("text-box")
-        todoDiv.classList.remove("todo")
-        todoDiv.classList.remove("todo-color")
-        dateDiv.classList.remove("todo")
-        dateDiv.classList.remove("todo-color")
-        dateDiv.classList.add("date-box")
         box.appendChild(todoDiv)
         box.appendChild(dateDiv)
         let btn = this.doneBtn()
@@ -74,5 +69,16 @@ class Todo {
         btn.addEventListener("click", ()=>{this.done(btn)})
         btn.classList.remove("btn-done-color")
         btn.classList.add("btn-todo-color")
+    }
+
+    setClasses(todoDiv, dateDiv){
+        todoDiv.classList.add("text-box")
+        todoDiv.classList.remove("todo")
+        todoDiv.classList.remove("todo-color")
+        dateDiv.classList.remove("todo")
+        dateDiv.classList.remove("todo-color")
+        dateDiv.classList.add("date-box")
+
+        return todoDiv, dateDiv
     }
 }
